@@ -1,0 +1,114 @@
+.main__cta__secondary {
+    color: var(--secondary);
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 500;
+    padding: 12px 28px;
+    border-radius: 500px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.main__cta__secondary__small {
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.main__cta__primary {
+    padding: 12px 28px;
+    font-weight: 500;
+    border-radius: 500px;
+    border: 0px;
+    cursor: pointer;
+    background-color: var(--primary);
+    transition: 0.2s;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #fff;
+}
+
+.main__cta__primary__small {
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.main__lines__container {
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    opacity: 0.6;
+    transform: rotate(-40deg);
+}
+
+.main__lines__small {
+    width: 400px;
+    height: 68px;
+    background-color: var(--primary-light-accent);
+    opacity: 0.8;
+    margin-bottom: -24px;
+    margin-left: 750px;
+    transform: skew(-40deg);
+}
+
+.main__lines__large {
+    height: 68px;
+    width: 1800px;
+    background-color: var(--primary);
+    opacity: 0.6;
+    transform: skew(-40deg);
+}
+
+.main__max__width {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.form__error__p {
+    font-weight: 500;
+    color: rgb(var(--red));
+    font-size: 14px;
+}
+
+.form__error__container svg {
+    width: 14px;
+    height: 14px;
+    fill: rgb(var(--red));
+}
+
+.form__error__container {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(var(--red), .2);
+    padding: 8px 12px;
+    border-radius: 7px;
+    margin-top: 16px;
+}
+
+.loader {
+    pointer-events: none;
+    text-align: center;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    0% {
+      transform: rotate(0turn);
+    }
+    100% {
+      transform: rotate(1turn);
+    }
+}

@@ -1,0 +1,81 @@
+.landingpage__hero__container {
+    min-height: 700px;
+    padding: 0 var(--main-padding);
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.landingpage__hero__content {
+    display: block;
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.landingpage__hero__h1 {
+    font-size: 108px;
+    line-height: 100%;
+    font-family: "Bebas Neue";
+    font-weight: 400;
+}
+
+.landingpage__hero__description {
+    font-size: 22px;
+    line-height: 150%;
+    font-weight: 400;
+    max-width: 60%;
+}
+
+.landingpage__hero__cta__container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 24px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .landingpage__hero__container .main__lines__container {
+    left: -170px;
+  }
+  .landingpage__hero__description {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .landingpage__hero__h1 {
+    font-size: 86px;
+  }
+  .landingpage__hero__container .main__lines__container {
+    left: -450px;
+    top: 450px;
+  }
+  .landingpage__hero__cta__container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .landingpage__hero__h1 {
+    font-size: 64px;
+  }
+  .landingpage__hero__description {
+    font-size: 18px;
+    padding-top: 12px;
+    max-width: 100%;
+  }
+  .landingpage__hero__cta__container .header__cta__buttons {
+    display: flex;
+  }
+  .landingpage__hero__container {
+    padding-top: 60px;
+  }
+  .landingpage__hero__container .main__lines__container {
+    left: -600px;
+    top: 450px;
+  }
+}

@@ -1,0 +1,297 @@
+.login__container {
+    background-color: var(--background);
+    padding: 100px 14%;
+    padding-top: 60px;
+    position: relative;
+    min-height: 800px;
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.login__identity__container {
+    max-width: 560px;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0px auto;
+    gap: 5px;
+    padding-bottom: 16px;
+}
+
+.login__identity__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.login__identity__logo {
+    width: auto;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.login__modal__container {
+    width: 600px;
+    background-color: #fff;
+    z-index: 3;
+    border-radius: 7px;
+    position: relative;
+    padding: 48px 64px;
+    border-top: 6px solid var(--primary);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+}
+
+.login__modal__h1 {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+.login__modal__h2 {
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0.8;
+    padding-bottom: 24px;
+}
+
+.login__modal__label {
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+.login__modal__link {
+    color: var(--primary);
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px transparent solid;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.login__modal__cta__container {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.login__modal__cta__primary {
+    width: 100%;
+    padding: 15px 24px;
+    background-color: var(--primary);
+    border-radius: 7px;
+    border: 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+    transition: 0.35s;
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .2px;
+}
+
+.login__modal__cta__primary svg {
+    fill: #fff;
+}
+
+.login__modal__cta__primary__arrow__container {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.login__modal__cta__primary__arrow__container svg {
+    min-width: 24px;
+    height: 24px;
+    fill: #fff;
+    transition: transform 0.5s ease;
+    transform: translateX(-24px);
+}
+
+.login__modal__cta__primary:hover
+.login__modal__cta__primary__arrow__container svg {
+    transform: translateX(0px);
+}
+
+.login__modal__cta__divider {
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+    gap: 10px;
+}
+
+.login__modal__cta__divider__line {
+    width: 100%;
+    height: 1.5px;
+    background-color: #ebebeb;
+}
+
+.login__modal__cta__divider__p {
+    font-size: 14px;
+    color: #999;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.login__modal__checkbox__container {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+}
+
+.login__modal__checkbox__box {
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    background-color: var(--divider);
+    margin-right: 8px;
+    cursor: pointer;
+    border: 1px solid #c4c4c4;
+}
+
+.login__modal__checkbox__container:hover .login__modal__checkbox__box {
+    border: 1px solid #9b9b9b;
+}
+
+.login__modal__checkbox__box svg {
+    fill: #fff;
+    display: none;
+}
+
+.login__modal__checkbox__p {
+    font-size: 14px;
+    transition: 0.1s;
+    opacity: 0.5;
+    font-weight: 300;
+}
+
+.login__modal__checkbox__selected .login__modal__checkbox__box {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.login__modal__checkbox__selected svg {
+    display: block;
+}
+
+.login__modal__form__element {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.login__modal__form__element__input__container {
+    width: 100%;
+    border-radius: 7px;
+    overflow: hidden;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-self: center;
+}
+
+.login__modal__form__element__input {
+    font-size: 15px;
+    padding: 0px 15px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #D7DBEC;
+    padding-right: 44px;
+    border-radius: 7px;
+}
+
+.login__modal__form__element__input:focus {
+    border-color: var(--primary) !important;
+}
+
+.login__modal__form__element__disabled {
+    cursor: default;
+    margin-bottom: 16px;
+}
+
+.login__modal__form__element__disabled input {
+    background-color: var(--divider);
+    color: rgba(0,0,0,.5);
+}
+
+.login__modal__form__element__input__container svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 15px;
+    top: 17px;
+    cursor: pointer;
+}
+
+.login__modal__cta__provider__container {
+    display: flex;
+    gap: 15px;
+}
+
+.login__modal__cta__provider__container span {
+    width: 100%;
+}
+
+.login__modal__cta__provider__element {
+    width: 100%;
+    background-color: var(--divider);
+    border-radius: 4px;
+    border: 0px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+    border-radius: 7px;
+    font-weight: 400;
+    font-size: 14px;
+    gap: 8px;
+    color: rgba(0,0,0,.7);
+}
+
+.login__modal__cta__provider__element span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.login__modal__cta__provider__element__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.login__modal__form__element__multi {
+    border: 0px;
+    overflow: hidden;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.login__modal__form__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
