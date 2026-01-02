@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import Image from 'next/image'
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, updateProfile, FacebookAuthProvider } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, updateProfile, FacebookAuthProvider, signInWithRedirect, getRedirectResult } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
 
@@ -86,20 +86,35 @@ function Signup () {
         }
     };
 
+    useEffect(() => {
+        getRedirectResult(auth)
+            .then(async (result) => {
+            if (!result) return;
+                const user = result.user;
+
+                // Opret session som før
+                const idToken = await user.getIdToken();
+                await createFirebaseSession(idToken);
+
+                router.push("/");
+            })
+            .catch((error) => {
+                console.error(error);
+                setFormMessage({ type: "error", message: "Google signup fejlede" });
+            });
+    }, []);
+
     async function handleGoogleSignup() {
         try {
             const provider = new GoogleAuthProvider();
 
-            const credential = await signInWithPopup(auth, provider);
-            const user = credential.user;
+            await signInWithRedirect(auth, provider);
 
-            // 3️⃣ Opdater profil hvis nødvendigt
-            // Bemærk: Google leverer allerede displayName og email
-            // Hvis du vil tilføje noget ekstra, kan du gøre det her
-            // await updateProfile(user, { displayName: "Ekstra navn" });
+            /* const credential = await signInWithPopup(auth, provider);
+            const user = credential.user; */
 
-            const idToken = await user.getIdToken();
-            await createFirebaseSession(idToken);
+            /* const idToken = await user.getIdToken();
+            await createFirebaseSession(idToken); */
 
             router.push("/");
 
