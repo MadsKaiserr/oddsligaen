@@ -1,4 +1,3 @@
-// app/api/auth/session/route.ts
 import { cookies } from "next/headers";
 import { adminAuth } from "@/lib/firebase-admin";
 

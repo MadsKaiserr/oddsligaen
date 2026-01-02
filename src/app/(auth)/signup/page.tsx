@@ -89,6 +89,9 @@ function Signup () {
     async function handleGoogleSignup() {
         try {
             const provider = new GoogleAuthProvider();
+            provider.setCustomParameters({
+                prompt: "select_account",
+            });
 
             const credential = await signInWithPopup(auth, provider);
             const user = credential.user;
