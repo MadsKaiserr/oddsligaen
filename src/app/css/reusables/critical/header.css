@@ -35,6 +35,9 @@
     border-right: 1px solid #D6D6E3;
     display: flex;
     align-items: center;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
 }
 
 .announcementbar__link:first-child {

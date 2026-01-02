@@ -17,6 +17,9 @@ async function Header () {
                         {/* <div className="announcementbar__left__container">
                         </div> */}
                         <div className="announcementbar__right__container">
+                            <form action="/api/auth/logout" method="post">
+                                <button type="submit" className="announcementbar__link">Log ud</button>
+                            </form>
                             <Link href="/hvordan-spiller-man" className="announcementbar__link">Hvordan spiller man?</Link>
                             <Link href="/kundeservice" className="announcementbar__link">Kundeservice</Link>
                             <Link href="/om-os" className="announcementbar__link">Om OddsLigaen</Link>
