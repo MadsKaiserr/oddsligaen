@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import AuthActions from "@/app/components/auth/AuthActions";
 import { getServerUser } from "@/lib/auth";
 
 import "@/app/css/reusables/critical/header.css";
