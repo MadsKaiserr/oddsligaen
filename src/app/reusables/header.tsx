@@ -60,9 +60,6 @@ async function Header () {
                                 </svg>
                             </Link>
                             <div className="header__cta__buttons">
-                                <form action="/api/auth/logout" method="post" className="header__cta__buttons">
-                                <button type="submit" className="main__cta__secondary main__cta__secondary__small">Log ud</button>
-                            </form>
                                 <Link href="/login" className="main__cta__secondary main__cta__secondary__small">Log ind</Link>
                                 <Link href="/signup" className="main__cta__primary main__cta__primary__small">Opret konto</Link>
                             </div>
